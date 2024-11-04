@@ -4,13 +4,13 @@ import { UserModal } from "@/lib/models/User";
 export async function GET(request) {
 
     await connectDB()
-    console.log('conneted',connectDB());
+    console.log('mongoDB connect');
     const users = await UserModal.find()
     return Response.json(users, {status: 200})
 }
  
 
- 
+console.log('conneted');
 export async function POST(request) {
     await connectDB();
     

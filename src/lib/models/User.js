@@ -20,4 +20,4 @@ bio: String
 })
 
 
-export const UserModal = mongoose.model('User', userSchema);
+export const UserModal = mongoose.models.User ||    mongoose.model('User', userSchema);
